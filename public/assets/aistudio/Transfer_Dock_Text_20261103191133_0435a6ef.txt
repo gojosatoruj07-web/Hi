@@ -1,0 +1,1232 @@
+MASTER BUILD PROMPT — SHADOW SYSTEM
+
+The Path to Jin-Woo
+
+You are a senior full-stack engineer, AI architect, UI/UX designer and Firebase specialist.
+
+Build a complete, production-quality personal AI training application called:
+
+PROJECT NAME: SHADOW SYSTEM
+SUBTITLE: THE PATH TO JIN-WOO
+
+The application is my personal mental development, physical fitness, discipline, observation, memory, intelligence, emotional control and daily-life training system.
+
+IMPORTANT: Do not build a normal chatbot or a simple habit tracker.
+
+Build an advanced personal training system with interconnected modules, persistent memory, AI analysis, daily quests, routines, journals and progress tracking.
+
+==================================================
+PHASE 1 — UNDERSTAND THE CORE CONCEPT
+
+My goal is to develop the qualities associated with Sung Jin-Woo:
+
+1. Mental strength
+2. Physical fitness
+3. Discipline
+4. Emotional control
+5. Intelligence
+6. Observation
+7. Memory
+8. Logical thinking
+9. Problem-solving
+10. Confidence
+11. Communication
+12. Strategic thinking
+13. Patience
+14. Consistency
+15. Self-control
+
+The AI must behave like a familiar, trusted Sung Jin-Woo-inspired companion and personal trainer.
+
+IMPORTANT PERSONALITY REQUIREMENTS:
+
+- Talk in simple Hinglish.
+- Use short, direct sentences.
+- Talk calmly, confidently and intelligently.
+- Focus on the main point.
+- Give reasons when necessary, but keep explanations short.
+- Avoid unnecessary motivation and long paragraphs.
+- Never behave as if I am his enemy.
+- Treat me as someone he already knows and trusts.
+- Talk naturally about everyday student life.
+- Be serious when I make mistakes.
+- Correct my weaknesses directly.
+- Never insult, humiliate or unnecessarily praise me.
+- Give practical instructions instead of generic motivational speeches.
+- Remember previous conversations and my progress.
+
+The character-inspired personality should remain consistent across every AI interaction.
+
+Do not make the AI claim that it is literally the real fictional character.
+
+==================================================
+PHASE 2 — TECHNOLOGY STACK
+
+Use:
+
+Frontend:
+
+- React
+- TypeScript
+- Vite
+- Tailwind CSS
+- Framer Motion
+- Lucide React icons
+
+Backend:
+
+- Node.js
+- Express
+- TypeScript
+
+Database:
+
+- Firebase Authentication
+- Cloud Firestore
+
+AI:
+
+- Google Gemini API
+
+Architecture:
+
+- Simple modular architecture.
+- Reusable components.
+- Centralized API service.
+- Centralized error handling.
+- Clear separation between frontend and backend.
+- Avoid unnecessary abstractions and overengineering.
+
+IMPORTANT API REQUIREMENT:
+
+Use ONE Gemini API key for all AI intelligence features.
+
+The same Gemini integration must power:
+
+- System Chat
+- Daily analysis
+- Daily quest generation
+- Emotional analysis
+- Journal analysis
+- Routine analysis
+- Weekly reports
+- Final 30-day report
+- Progress recommendations
+
+Do not create separate API integrations for these features.
+
+Firebase is a separate infrastructure service and must handle authentication and persistent storage.
+
+SECURITY:
+
+- Never expose GEMINI_API_KEY in frontend code.
+- Store GEMINI_API_KEY in server-side environment variables.
+- Create a secure backend endpoint for Gemini requests.
+- Validate all incoming requests.
+- Authenticate requests using Firebase ID tokens.
+- Apply reasonable request limits.
+- Never send unnecessary personal information to Gemini.
+- Never commit secrets to GitHub.
+
+Use environment variables:
+
+GEMINI_API_KEY=
+GEMINI_MODEL=
+FIREBASE_PROJECT_ID=
+
+Use the currently supported Gemini model available to the project. Do not hardcode an obsolete model name.
+
+==================================================
+PHASE 3 — APPLICATION DESIGN
+
+Create an advanced dark-themed interface.
+
+DESIGN IDENTITY:
+
+- Primary: Purple (#9333EA)
+- Background: #080B14
+- Secondary background: #101525
+- Cards: #151B2D
+- Borders: #292F45
+- Text: #F8FAFC
+- Secondary text: #94A3B8
+
+VISUAL STYLE:
+
+Inspired by a futuristic Hunter System interface.
+
+Include:
+
+- Animated system panels.
+- Purple glowing borders.
+- Subtle particle effects.
+- Animated progress lines.
+- Looping energy lines.
+- Animated loading sequences.
+- Opening and closing animations.
+- Smooth page transitions.
+- Animated quest completion.
+- Circular progress indicators.
+- Dynamic statistics.
+- Notification animations.
+- Animated charts.
+- Responsive navigation.
+
+Use animations carefully. Maintain smooth performance on Android phones.
+
+Do not make the UI look like a basic dashboard template.
+
+MOBILE FIRST:
+
+The application must work properly on:
+
+- Android phones.
+- Tablets.
+- Desktop browsers.
+
+MAIN NAVIGATION:
+
+1. Dashboard
+2. System Chat
+3. Daily Quests
+4. Daily Routine
+5. Mind Training
+6. Emotion Control
+7. Daily Diary
+8. Analysis
+9. Settings
+
+Use a responsive sidebar on desktop and bottom navigation on mobile.
+
+==================================================
+PHASE 4 — DASHBOARD
+
+Create a personalized Hunter Dashboard.
+
+Display:
+
+- Current Hunter Level.
+- Current Day (Day 1–30).
+- Current Hunter Progress Index.
+- Today's quest completion.
+- Routine completion percentage.
+- Mental training completion.
+- Physical training completion.
+- Emotional control progress.
+- Current streak.
+- Today's AI status.
+- Upcoming mission.
+- Daily system notification.
+
+Display a welcome message in Jin-Woo-inspired Hinglish.
+
+Example:
+
+"System Online.
+Aaj ka objective clear hai.
+Apni weaknesses identify karo aur unhe improve karo."
+
+All dashboard information must come from actual Firestore data.
+
+Never use fake statistics or hardcoded progress.
+
+==================================================
+PHASE 5 — SYSTEM CHAT
+
+This is the most important feature.
+
+Create a persistent AI conversation interface.
+
+The AI should have a consistent Sung Jin-Woo-inspired personality.
+
+The chat must have access to my actual application data.
+
+It should understand:
+
+- My daily routine.
+- Completed routine activities.
+- Missed activities.
+- Current quests.
+- Previous quests.
+- My diary entries.
+- My emotional reports.
+- My daily analysis.
+- My weekly reports.
+- My strengths.
+- My weaknesses.
+- My current progress percentage.
+- Previous conversations when relevant.
+
+EXAMPLE QUESTIONS:
+
+"Abhi mera routine kitna complete hua?"
+
+"Main abhi kitne percent Jin-Woo jaisa bana?"
+
+"Aaj maine kya improve kiya?"
+
+"Meri sabse badi weakness kya hai?"
+
+"Aaj ka next quest kya hai?"
+
+"Maine kal kya galti ki thi?"
+
+The AI must retrieve real application data before answering.
+
+Never invent completed activities, scores or diary details.
+
+PERSONALITY EXAMPLE:
+
+User:
+"Aaj maine study nahi ki."
+
+AI:
+"Reason batao.
+Discipline ka matlab perfect hona nahi, apne actions ki responsibility lena hai.
+Kal ke liye ek realistic target set karte hain."
+
+Keep responses concise.
+
+CHAT MEMORY:
+
+- Save conversations in Firestore.
+- Maintain conversation history.
+- Preserve personality across sessions.
+- Retrieve relevant user history.
+- Do not load unlimited history into every Gemini request.
+- Use relevant summaries and recent messages.
+
+Every response should be short unless I specifically request details.
+
+==================================================
+PHASE 6 — 30-DAY DAILY QUEST SYSTEM
+
+Build a complete 30-day training program.
+
+Each day must have different missions.
+
+Do not simply repeat identical quests.
+
+Create progressive difficulty.
+
+MISSION CATEGORIES:
+
+A. Observation Training
+B. Memory Training
+C. Logical Thinking
+D. Problem-Solving
+E. Concentration
+F. Emotional Control
+G. Confidence
+H. Communication
+I. Body Language
+J. Physical Fitness
+K. Discipline
+L. Strategic Thinking
+
+EXAMPLE MISSIONS:
+
+DAY 1 — INITIAL ASSESSMENT
+
+- Observe your surroundings for 2 minutes.
+- Remember 10 objects.
+- Recall them without looking.
+- Complete a 20-minute focused study session.
+- Write down three personal weaknesses.
+- Practice controlled breathing for 3 minutes.
+
+DAY 2 — OBSERVATION
+
+- Observe five details about your surroundings.
+- Recall yesterday's observations.
+- Identify one detail you normally ignore.
+- Complete a distraction-free study session.
+
+DAY 3 — MEMORY
+
+- Memorize 10 new words.
+- Recall them after 30 minutes.
+- Practice active recall.
+- Record your accuracy.
+
+DAY 4 — LOGICAL THINKING
+
+- Solve five logical reasoning problems.
+- Explain your reasoning.
+- Identify mistakes.
+
+DAY 5 — FOCUS
+
+- Complete a 25-minute focused session.
+- Avoid unnecessary phone usage.
+- Record distractions.
+
+DAY 6 — EMOTIONAL CONTROL
+
+- Identify your emotional triggers.
+- Practice the pause-before-response technique.
+- Write down one situation where you controlled your reaction.
+
+DAY 7 — WEEKLY ASSESSMENT
+
+- Test memory.
+- Test observation.
+- Test logical thinking.
+- Review discipline.
+- Generate AI analysis.
+
+Continue with progressively advanced missions until DAY 30.
+
+Include all categories throughout the 30-day program.
+
+Every quest must include:
+
+- Quest number.
+- Quest title.
+- Difficulty.
+- Objective.
+- Step-by-step instructions.
+- Estimated duration.
+- Completion criteria.
+- Reflection question.
+- AI evaluation.
+
+AI must adapt future quests according to my previous performance.
+
+Do not generate random meaningless tasks.
+
+QUEST RULES:
+
+- Maximum 3–5 meaningful missions per day.
+- Missions should fit student life.
+- No dungeon-related fictional activities.
+- Use realistic everyday challenges.
+- Make difficulty progressive.
+- Never assign dangerous physical challenges.
+- Allow recovery days.
+
+Save every quest and completion status in Firestore.
+
+==================================================
+PHASE 7 — DAILY ROUTINE SYSTEM
+
+IMPORTANT:
+Use the uploaded PDF:
+
+"Sung Jin-Woo Compact Daily Quest Log.pdf"
+
+Read all FOUR pages and reproduce its routine accurately.
+
+Do not ignore any schedule or invent replacement timings.
+
+Create four selectable routine profiles.
+
+PROFILE 1: NORMAL DAY (RUNNING)
+
+Daily schedule:
+
+7:30 AM — Wake up + 500 ml water
+7:40–8:40 AM — Running and training
+8:40–9:00 AM — Cool down and freshen up
+9:00–10:20 AM — Study Quest 1
+10:30–11:00 AM — Breakfast
+11:00 AM–12:30 PM — Study Quest 2
+12:30–1:00 PM — Rest / anime / music
+1:00–2:15 PM — Homework / practice
+2:30–3:00 PM — Lunch
+3:00–4:00 PM — Rest / nap
+4:00–5:00 PM — Japanese / coding / personal skill
+5:00–6:00 PM — Free time
+6:00–7:00 PM — Revision
+7:00–8:30 PM — Anime / gaming / hobby
+8:30–9:30 PM — Light reading / personal project
+9:30–10:15 PM — Clean room / prepare tomorrow
+10:15–10:30 PM — Wind down
+10:30 PM — Dinner
+11:00 PM — Sleep
+
+Training directive:
+30–40 minutes running and 20–30 minutes strength/stretching.
+
+PROFILE 2: EXAM DAY
+
+6:30 AM — Wake up
+6:40–7:40 AM — Training / cognitive priming
+7:40–8:30 AM — Get ready and relax
+8:30–10:20 AM — Study Block 1
+10:30–11:00 AM — Breakfast
+11:00 AM–12:30 PM — Study Block 2
+12:30–1:00 PM — Break
+1:00–2:20 PM — Previous Year Questions
+2:30–3:00 PM — Lunch
+3:00–3:30 PM — Rest
+3:30–5:30 PM — Study Block 3
+5:30–6:00 PM — Break
+6:00–7:30 PM — Sample paper / timed practice
+7:30–8:00 PM — Walk and rest
+8:00–9:15 PM — Weak topics / active recall
+9:15–10:15 PM — Light revision
+10:30 PM — Dinner
+11:00 PM — Sleep
+
+PROFILE 3: SCHOOL DAY (MONDAY / WEDNESDAY / FRIDAY)
+
+5:30 AM — Wake up
+5:35–6:00 AM — Quick revision
+6:00–6:25 AM — Training Part 1
+6:25–6:50 AM — Get ready
+6:50–7:00 AM — Small breakfast
+7:00 AM–1:00 PM — School
+1:00–1:10 PM — Travel home
+1:10–1:30 PM — Bath
+1:30–1:55 PM — Practical lunch
+2:00–5:00 PM — Cram school
+5:00–5:10 PM — Travel home
+5:10–5:40 PM — Snack and rest
+5:40–6:15 PM — Homework
+6:15–6:50 PM — Training Part 2
+6:50–7:30 PM — Study
+7:30–8:30 PM — Free time
+8:30–9:15 PM — Revision
+9:15–10:15 PM — Relax / hobby
+10:30 PM — Dinner
+11:00 PM — Sleep
+
+Training split:
+25 minutes AM + 35 minutes PM.
+
+PROFILE 4: EXTENDED CRAM (TUESDAY / THURSDAY / SATURDAY)
+
+5:30 AM — Wake up
+5:35–6:00 AM — Quick revision
+6:00–6:25 AM — Easy run / cardio
+6:25–6:50 AM — Get ready
+6:50–7:00 AM — Small breakfast
+7:00 AM–1:00 PM — School
+1:00–1:10 PM — Travel home
+1:10–1:30 PM — Bath
+1:30–1:55 PM — Practical lunch
+2:00–6:20 PM — Cram school
+6:20–6:30 PM — Home
+6:30–7:00 PM — Snack and recovery
+7:00–7:35 PM — Strength and stretching
+7:35–8:00 PM — Homework
+8:00–9:00 PM — Free time
+9:00–9:40 PM — Revision
+9:40–10:20 PM — Relax and prepare tomorrow
+10:30 PM — Dinner
+11:00 PM — Sleep
+
+SUNDAY:
+Recovery day.
+Light training or walking.
+
+7-DAY TRAINING ROTATION FROM PDF:
+
+MONDAY — Strength
+TUESDAY — Running
+WEDNESDAY — Strength
+THURSDAY — Running
+FRIDAY — Strength
+SATURDAY — Running
+SUNDAY — Recovery
+
+ROUTINE UI REQUIREMENTS:
+
+Display all activities with:
+
+- Exact time.
+- Activity name.
+- Checkbox.
+- Completion status.
+- Optional notes.
+
+When I complete an activity, I can tick its checkbox.
+
+When I untick it, update the database immediately.
+
+Display:
+
+- Completed activities.
+- Pending activities.
+- Missed activities.
+- Completion percentage.
+
+MIDNIGHT RESET:
+
+At 12:00 AM India Standard Time:
+
+1. Save the completed day's routine.
+2. Save all unfinished activities as missed or incomplete.
+3. Generate the daily summary.
+4. Preserve historical records.
+5. Start a fresh daily checklist.
+6. Never delete yesterday's data.
+
+Implement reliable date-based daily rollover.
+
+Use server-side scheduled processing if available, and implement an idempotent fallback when the user opens the application.
+
+Do not rely only on a browser timer.
+
+IMPORTANT PHYSICAL SAFETY:
+
+The PDF contains a 100 push-ups, 100 squats, 100 sit-ups and 10 km running target.
+
+Preserve these as original PDF goals and display them as configurable training targets.
+
+However:
+
+- Do not force these targets on beginners.
+- Do not automatically prescribe 10 km running.
+- Introduce gradual progression.
+- Include warm-up, recovery and rest.
+- Allow lower-intensity alternatives.
+- Never use exercise as punishment.
+- For a minor, use age-appropriate exercise recommendations.
+- Stop when experiencing pain, dizziness or unusual breathlessness.
+
+The application must prioritize sustainable improvement over dangerous overtraining.
+
+==================================================
+PHASE 8 — MIND TRAINING
+
+Create a separate Mind Training section.
+
+Include five independent training modules.
+
+1. OBSERVATION
+
+- Visual observation challenges.
+- Environmental awareness.
+- Detail identification.
+- Observation recall.
+
+2. MEMORY
+
+- Number memorization.
+- Word memorization.
+- Pattern recall.
+- Delayed recall tests.
+
+3. LOGICAL THINKING
+
+- Reasoning puzzles.
+- Pattern recognition.
+- Deductive reasoning.
+- Decision-making exercises.
+
+4. PROBLEM-SOLVING
+
+- Real-life student problems.
+- Scenario-based decisions.
+- Multiple solution approaches.
+- Consequence evaluation.
+
+5. FOCUS
+
+- Timed concentration exercises.
+- Distraction tracking.
+- Deep-work sessions.
+- Attention improvement.
+
+Track actual results.
+
+For example:
+Memory accuracy = correct recalled items / total items.
+
+Never generate fake improvement statistics.
+
+==================================================
+PHASE 9 — EMOTION CONTROL
+
+Build an independent Emotional Control System.
+
+Features:
+
+- Daily emotional check-in.
+- Emotion identification.
+- Anger control exercises.
+- Stress management.
+- Impulse control.
+- Patience training.
+- Reaction analysis.
+- Confidence exercises.
+- Breathing exercises.
+- Calm decision-making.
+
+Daily check-in questions:
+
+1. What did I feel today?
+2. What triggered that emotion?
+3. How did I react?
+4. Could I have responded better?
+5. What will I improve tomorrow?
+
+Gemini should analyze my responses.
+
+Example:
+
+"Situation: Someone irritated me.
+Reaction: I got angry immediately."
+
+AI response:
+
+"Trigger identify ho gaya.
+Next time response dene se pehle 5 seconds pause karo.
+Reaction ko control karna tumhara next objective hai."
+
+Never encourage emotional suppression, aggression or emotional isolation.
+
+==================================================
+PHASE 10 — DAILY DIARY
+
+Create a persistent daily journal.
+
+Every day should have its own entry:
+
+DAY 1
+DAY 2
+DAY 3
+...
+DAY 30
+
+Allow me to write about my entire day.
+
+Include:
+
+- What happened today?
+- What did I accomplish?
+- What mistakes did I make?
+- What did I learn?
+- How did I handle emotions?
+- What should I improve tomorrow?
+
+Also provide one large free-writing text editor.
+
+When I press:
+
+"COMPLETE TODAY'S DIARY"
+
+Trigger Gemini analysis.
+
+The AI must evaluate:
+
+1. Discipline.
+2. Decision-making.
+3. Emotional control.
+4. Confidence.
+5. Problem-solving.
+6. Self-awareness.
+7. Consistency.
+8. Behaviour.
+
+Then generate:
+
+- Short daily evaluation.
+- Strengths.
+- Weaknesses.
+- Mistakes.
+- Improvement advice.
+- Tomorrow's objective.
+- Tomorrow's personalized quest adjustments.
+
+Save the original diary permanently.
+
+Do not overwrite old diary entries.
+
+Allow editing with revision history.
+
+If I do not write a diary, do not pretend an analysis was completed.
+
+==================================================
+PHASE 11 — AI ANALYSIS SYSTEM
+
+Create an advanced analysis dashboard powered by Gemini.
+
+This is the central intelligence system.
+
+Analyze actual information from:
+
+- Routine completion.
+- Quest performance.
+- Mind training scores.
+- Emotional control exercises.
+- Physical training.
+- Diary entries.
+- Historical performance.
+- Consistency.
+- Weekly reviews.
+
+TRACK THESE ATTRIBUTES:
+
+1. Mental Strength
+2. Physical Fitness
+3. Discipline
+4. Emotional Control
+5. Observation
+6. Memory
+7. Logical Thinking
+8. Problem-Solving
+9. Focus
+10. Confidence
+11. Communication
+12. Strategic Thinking
+
+HUNTER PROGRESS INDEX:
+
+I specifically want extremely gradual progress tracking.
+
+Do not immediately jump from 0% to 1%.
+
+The starting baseline should be 0.0001%.
+
+Use small measurable increments such as:
+
+0.0001%
+0.0002%
+0.0003%
+0.0004%
+
+Continue gradually according to actual evidence.
+
+IMPORTANT:
+
+The percentage is a fictional gamified development index, NOT a scientifically measured similarity to a fictional character.
+
+Create a transparent scoring algorithm.
+
+Use:
+
+- Completed activities.
+- Verified exercise results.
+- Quest performance.
+- Actual test accuracy.
+- Journal consistency.
+- Historical progress.
+- Behavioural improvements.
+
+Do not increase the score merely because Gemini generates positive feedback.
+
+Do not award points for unverified claims.
+
+Avoid arbitrary percentage jumps.
+
+Store the exact score and scoring breakdown in Firestore.
+
+Display:
+
+CURRENT HUNTER PROGRESS
+0.0001%
+
+MENTAL DEVELOPMENT
+PHYSICAL DEVELOPMENT
+DISCIPLINE
+EMOTIONAL CONTROL
+INTELLIGENCE
+FOCUS
+
+Show historical progress graphs.
+
+Also display:
+
+- Previous score.
+- Current score.
+- Daily change.
+- Weekly change.
+- Biggest improvement.
+- Weakest attribute.
+
+Allow the AI to explain exactly why the score changed.
+
+==================================================
+PHASE 12 — WEEKLY REVIEW
+
+Every seven days, generate a weekly report.
+
+Analyze:
+
+- Total completed quests.
+- Routine consistency.
+- Mental performance.
+- Physical progress.
+- Emotional development.
+- Diary observations.
+- Strongest attribute.
+- Weakest attribute.
+- Repeated mistakes.
+- Improvements.
+
+Give a short Jin-Woo-inspired evaluation.
+
+Generate the next week's personalized training strategy.
+
+Do not reset previous weekly results.
+
+==================================================
+PHASE 13 — FINAL 30-DAY REPORT
+
+At the end of Day 30, generate a detailed report.
+
+Include:
+
+1. Starting Hunter Progress Index.
+2. Final Hunter Progress Index.
+3. Total improvement.
+4. Mental development.
+5. Physical development.
+6. Discipline improvement.
+7. Emotional control improvement.
+8. Observation and memory results.
+9. Logical thinking results.
+10. Focus performance.
+11. Routine consistency.
+12. Biggest strengths.
+13. Remaining weaknesses.
+14. Most important mistakes.
+15. Future training recommendations.
+
+Include before-and-after charts.
+
+Generate a personalized next 30-day training plan.
+
+Never claim that I have become identical to a fictional character.
+
+==================================================
+PHASE 14 — FIRESTORE DATABASE STRUCTURE
+
+Use a simple and scalable Firestore structure.
+
+users/{uid}
+
+- displayName
+- createdAt
+- timezone
+- preferences
+- currentDay
+- currentHunterIndex
+
+users/{uid}/dailyProgress/{date}
+
+- routineProfile
+- routineTasks
+- completedCount
+- pendingCount
+- routineScore
+- questResults
+- mindTrainingResults
+- emotionalCheckIn
+- dailyAnalysis
+- diaryCompleted
+- hunterIndexSnapshot
+
+users/{uid}/quests/{questId}
+
+- dayNumber
+- title
+- category
+- instructions
+- difficulty
+- status
+- result
+- createdAt
+
+users/{uid}/diaries/{date}
+
+- content
+- aiAnalysis
+- strengths
+- weaknesses
+- tomorrowPlan
+- updatedAt
+
+users/{uid}/conversations/{conversationId}
+
+- title
+- createdAt
+- updatedAt
+
+users/{uid}/conversations/{conversationId}/messages/{messageId}
+
+- role
+- content
+- timestamp
+
+users/{uid}/weeklyReports/{weekId}
+
+- summary
+- scores
+- recommendations
+- createdAt
+
+users/{uid}/settings/preferences
+
+- routineProfile
+- notificationsEnabled
+- theme
+- privacyPreferences
+
+Keep database writes efficient.
+
+Do not duplicate large amounts of information unnecessarily.
+
+==================================================
+PHASE 15 — AUTHENTICATION AND SECURITY
+
+Implement:
+
+- Firebase email/password authentication.
+- Registration.
+- Login.
+- Logout.
+- Password reset.
+- Persistent authentication.
+- Protected application routes.
+
+Firestore security rules must ensure:
+
+- Users can only access their own data.
+- Users cannot access another person's diaries.
+- Users cannot modify another user's progress.
+- Validate permitted fields.
+- Protect administrative data.
+
+All Gemini calls must go through the backend.
+
+Never trust frontend-generated analysis or scores without server-side validation.
+
+==================================================
+PHASE 16 — SYSTEM CONNECTIONS
+
+All modules must communicate with one another.
+
+Examples:
+
+1. When I complete a routine task, dashboard progress updates.
+
+2. When I complete a quest, analysis receives its actual result.
+
+3. When I complete my diary, Gemini evaluates my day.
+
+4. Diary analysis influences tomorrow's quest.
+
+5. Emotion control results influence mental development analysis.
+
+6. Mind training test results update the appropriate attributes.
+
+7. Weekly reports use the previous seven days of saved records.
+
+8. System Chat can retrieve all relevant information.
+
+9. Daily rollover preserves the entire previous day.
+
+10. The final report uses all 30 days of actual data.
+
+There must be ONE consistent source of truth for progress.
+
+Avoid conflicting scores between sections.
+
+==================================================
+PHASE 17 — ERROR HANDLING AND PERFORMANCE
+
+Handle:
+
+- Gemini API failures.
+- Network disconnections.
+- Firebase authentication failures.
+- Firestore read/write errors.
+- Invalid API responses.
+- Empty diary entries.
+- Duplicate submissions.
+- Midnight rollover conflicts.
+- Loading states.
+- Failed quest generation.
+- Missing configuration.
+- Expired authentication tokens.
+
+Requirements:
+
+- Display useful error messages.
+- Provide retry options.
+- Prevent duplicate submissions.
+- Preserve unsaved journal content locally where appropriate.
+- Never show fake success messages.
+- Never mark an unsuccessful task as complete.
+- Use loading skeletons.
+- Use pagination for historical data.
+- Avoid unnecessary Gemini requests.
+- Cache suitable non-sensitive information.
+
+If Gemini is unavailable, the routine and journaling systems must still work.
+
+==================================================
+PHASE 18 — IMPLEMENTATION PROCESS
+
+Build in the following order.
+
+PHASE A:
+Project structure, design system, routing and reusable components.
+
+PHASE B:
+Firebase initialization, authentication and Firestore.
+
+PHASE C:
+Dashboard and daily routine.
+
+PHASE D:
+Quest generation and quest tracking.
+
+PHASE E:
+Mind training and emotional control.
+
+PHASE F:
+Daily diary and persistent history.
+
+PHASE G:
+Secure Gemini backend integration.
+
+PHASE H:
+System Chat with application data access.
+
+PHASE I:
+Hunter Progress Index and analysis.
+
+PHASE J:
+Weekly reports and final 30-day report.
+
+PHASE K:
+Animations, responsive design and notifications.
+
+PHASE L:
+Testing, security review and deployment.
+
+Do not generate all the application code in one enormous component.
+
+Keep files organized and reasonably sized.
+
+Avoid:
+
+- Unnecessary packages.
+- Duplicate components.
+- Duplicate API endpoints.
+- Unused features.
+- Excessive abstraction.
+- Placeholder screens.
+- Fake AI responses.
+- Fake statistics.
+- Hardcoded user progress.
+
+==================================================
+PHASE 19 — TESTING CHECKLIST
+
+Before declaring the application complete, test:
+
+[ ] Registration works.
+[ ] Login works.
+[ ] Logout works.
+[ ] Authentication persists after refresh.
+[ ] Firestore saves user data.
+[ ] Routine profiles load correctly.
+[ ] All four PDF schedules are represented.
+[ ] Checkboxes work.
+[ ] Routine progress calculates correctly.
+[ ] Midnight rollover works in Asia/Kolkata.
+[ ] Previous days remain accessible.
+[ ] All 30 daily quests are available.
+[ ] Quest completion persists.
+[ ] Mind training exercises work.
+[ ] Emotional check-ins save.
+[ ] Diary entries persist.
+[ ] Diary analysis works with Gemini.
+[ ] System Chat retrieves real user data.
+[ ] AI maintains its personality.
+[ ] Hunter Progress Index updates correctly.
+[ ] No arbitrary percentage jumps occur.
+[ ] Weekly reports work.
+[ ] Final 30-day report works.
+[ ] Gemini API key is never exposed.
+[ ] Firestore security rules work.
+[ ] Mobile navigation works.
+[ ] Animations perform smoothly.
+[ ] Error handling works.
+[ ] No broken buttons.
+[ ] No empty placeholder sections.
+[ ] No fake completion indicators.
+
+==================================================
+PHASE 20 — DEPLOYMENT
+
+Prepare the project for deployment.
+
+Frontend:
+
+- Firebase Hosting or another compatible hosting provider.
+
+Backend:
+
+- Firebase Cloud Functions or Cloud Run.
+
+Database:
+
+- Cloud Firestore.
+
+Authentication:
+
+- Firebase Authentication.
+
+AI:
+
+- Gemini API.
+
+Provide:
+
+1. Complete project structure.
+2. Required environment variables.
+3. Firebase setup instructions.
+4. Firestore security rules.
+5. Gemini API setup.
+6. Backend deployment instructions.
+7. Frontend deployment instructions.
+8. Testing instructions.
+9. Troubleshooting instructions.
+
+Do not put secret API keys in source code.
+
+==================================================
+FINAL DEVELOPMENT INSTRUCTIONS
+
+Follow these rules throughout development:
+
+1. Build a fully functional application, not just a visual prototype.
+2. Implement medium-complexity architecture.
+3. Do not overcode.
+4. Do not omit requested features.
+5. Avoid overlapping functionality.
+6. Use the same Gemini integration everywhere.
+7. Maintain consistent user data.
+8. Make all sections interconnected.
+9. Prioritize actual functionality over decorative features.
+10. Maintain the Jin-Woo-inspired personality in every AI interaction.
+11. Use the uploaded PDF as the source of truth for the four routine schedules and weekly rotation.
+12. Never introduce dangerous exercise targets as compulsory requirements.
+13. Never fabricate AI analysis.
+14. Never lose historical data.
+15. Test every important feature before marking it complete.
+
+If a feature cannot be implemented because of missing configuration, clearly identify the missing requirement instead of pretending it works.
+
+Start by inspecting the project environment and uploaded PDF.
+
+Then implement the application phase by phase.
+
+Do not stop after creating the UI.
+
+Complete the frontend, backend, database integration, AI integration and testing.
+
+FINAL OBJECTIVE:
+
+Build SHADOW SYSTEM — my personal AI-powered development system.
+
+It should feel like a real futuristic Hunter System that understands my daily life, remembers my progress, identifies my weaknesses, trains my mind and body, gives me daily missions and gradually helps me develop the discipline and qualities associated with Sung Jin-Woo.
+
+SYSTEM STATUS: INITIALIZATION REQUIRED.

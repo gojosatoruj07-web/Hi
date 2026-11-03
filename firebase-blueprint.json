@@ -1,0 +1,167 @@
+{
+  "entities": {
+    "UserProfile": {
+      "title": "UserProfile",
+      "description": "User profile and overall progression state",
+      "type": "object",
+      "properties": {
+        "uid": { "type": "string" },
+        "displayName": { "type": "string" },
+        "email": { "type": "string" },
+        "createdAt": { "type": "string" },
+        "timezone": { "type": "string" },
+        "currentDay": { "type": "integer" },
+        "currentHunterIndex": { "type": "number" },
+        "streak": { "type": "integer" },
+        "selectedRoutineProfile": { "type": "string" }
+      },
+      "required": ["uid", "displayName", "createdAt", "currentDay", "currentHunterIndex"]
+    },
+    "DailyProgress": {
+      "title": "DailyProgress",
+      "description": "Daily logged routine tasks, quest state, and scores for a specific date (YYYY-MM-DD)",
+      "type": "object",
+      "properties": {
+        "date": { "type": "string" },
+        "routineProfile": { "type": "string" },
+        "routineTasks": { "type": "array" },
+        "completedCount": { "type": "integer" },
+        "pendingCount": { "type": "integer" },
+        "routineScore": { "type": "number" },
+        "questCompleted": { "type": "boolean" },
+        "mindTrainingScore": { "type": "number" },
+        "emotionalCheckInDone": { "type": "boolean" },
+        "diaryCompleted": { "type": "boolean" },
+        "hunterIndexSnapshot": { "type": "number" }
+      },
+      "required": ["date", "routineProfile", "completedCount", "pendingCount"]
+    },
+    "Quest": {
+      "title": "Quest",
+      "description": "Daily quest mission item",
+      "type": "object",
+      "properties": {
+        "questId": { "type": "string" },
+        "dayNumber": { "type": "integer" },
+        "title": { "type": "string" },
+        "category": { "type": "string" },
+        "instructions": { "type": "array" },
+        "difficulty": { "type": "string" },
+        "status": { "type": "string" },
+        "reflectionAnswer": { "type": "string" },
+        "aiEvaluation": { "type": "string" },
+        "deliveredAt": { "type": "string" },
+        "completedAt": { "type": "string" }
+      },
+      "required": ["questId", "dayNumber", "title", "status"]
+    },
+    "Diary": {
+      "title": "Diary",
+      "description": "Daily journal entry and AI analysis",
+      "type": "object",
+      "properties": {
+        "date": { "type": "string" },
+        "dayNumber": { "type": "integer" },
+        "content": { "type": "string" },
+        "accomplishments": { "type": "string" },
+        "mistakes": { "type": "string" },
+        "learnings": { "type": "string" },
+        "emotionNotes": { "type": "string" },
+        "aiAnalysis": { "type": "string" },
+        "strengths": { "type": "array" },
+        "weaknesses": { "type": "array" },
+        "tomorrowPlan": { "type": "string" },
+        "updatedAt": { "type": "string" }
+      },
+      "required": ["date", "content"]
+    },
+    "PersonalMemory": {
+      "title": "PersonalMemory",
+      "description": "User shared personal traits, goals, habits, vulnerabilities, and experiences",
+      "type": "object",
+      "properties": {
+        "memoryId": { "type": "string" },
+        "category": { "type": "string" },
+        "fact": { "type": "string" },
+        "source": { "type": "string" },
+        "updatedAt": { "type": "string" }
+      },
+      "required": ["memoryId", "category", "fact"]
+    },
+    "DailyReport": {
+      "title": "DailyReport",
+      "description": "End-of-day combined personal development report",
+      "type": "object",
+      "properties": {
+        "date": { "type": "string" },
+        "evaluation": { "type": "string" },
+        "strengths": { "type": "array" },
+        "weaknesses": { "type": "array" },
+        "mistakes": { "type": "array" },
+        "tomorrowObjective": { "type": "string" },
+        "createdAt": { "type": "string" }
+      },
+      "required": ["date", "evaluation"]
+    },
+    "ChatMessage": {
+      "title": "ChatMessage",
+      "description": "System chat message",
+      "type": "object",
+      "properties": {
+        "messageId": { "type": "string" },
+        "role": { "type": "string" },
+        "content": { "type": "string" },
+        "timestamp": { "type": "string" }
+      },
+      "required": ["messageId", "role", "content", "timestamp"]
+    },
+    "WeeklyReport": {
+      "title": "WeeklyReport",
+      "description": "7-day evaluation report",
+      "type": "object",
+      "properties": {
+        "weekId": { "type": "string" },
+        "weekNumber": { "type": "integer" },
+        "summary": { "type": "string" },
+        "scores": { "type": "object" },
+        "recommendations": { "type": "array" },
+        "createdAt": { "type": "string" }
+      },
+      "required": ["weekId", "weekNumber", "summary"]
+    }
+  },
+  "firestore": {
+    "/users/{uid}": {
+      "schema": "UserProfile",
+      "description": "Root document for user account and level progress"
+    },
+    "/users/{uid}/dailyProgress/{date}": {
+      "schema": "DailyProgress",
+      "description": "Daily schedule task logs and daily summaries"
+    },
+    "/users/{uid}/quests/{questId}": {
+      "schema": "Quest",
+      "description": "Daily missions and completion evaluations"
+    },
+    "/users/{uid}/diaries/{date}": {
+      "schema": "Diary",
+      "description": "Journal entries and Jin-Woo AI evaluations"
+    },
+    "/users/{uid}/personalMemory/{memoryId}": {
+      "schema": "PersonalMemory",
+      "description": "Personal memories and traits saved for Jin-Woo AI context"
+    },
+    "/users/{uid}/dailyReports/{date}": {
+      "schema": "DailyReport",
+      "description": "Combined end-of-day development reports"
+    },
+    "/users/{uid}/conversations/{conversationId}/messages/{messageId}": {
+      "schema": "ChatMessage",
+      "description": "Persistent conversation messages with Jin-Woo AI companion"
+    },
+    "/users/{uid}/weeklyReports/{weekId}": {
+      "schema": "WeeklyReport",
+      "description": "7-day review reports and training strategies"
+    }
+  }
+}

@@ -1,0 +1,61 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    // Helper function to check if user is authenticated
+    function isSignedIn() {
+      return request.auth != null;
+    }
+
+    // Helper function to check user ownership
+    function isOwner(userId) {
+      return isSignedIn() && request.auth.uid == userId;
+    }
+
+    // Catch-all default deny
+    match /{document=**} {
+      allow read, write: if false;
+    }
+
+    // User document and subcollections
+    match /users/{userId} {
+      allow read, write: if isOwner(userId);
+
+      match /dailyProgress/{date} {
+        allow read, write: if isOwner(userId);
+      }
+
+      match /quests/{questId} {
+        allow read, write: if isOwner(userId);
+      }
+
+      match /diaries/{date} {
+        allow read, write: if isOwner(userId);
+      }
+
+      match /personalMemory/{memoryId} {
+        allow read, write: if isOwner(userId);
+      }
+
+      match /dailyReports/{date} {
+        allow read, write: if isOwner(userId);
+      }
+
+      match /conversations/{conversationId} {
+        allow read, write: if isOwner(userId);
+
+        match /messages/{messageId} {
+          allow read, write: if isOwner(userId);
+        }
+      }
+
+      match /weeklyReports/{weekId} {
+        allow read, write: if isOwner(userId);
+      }
+
+      match /settings/{settingId} {
+        allow read, write: if isOwner(userId);
+      }
+    }
+  }
+}

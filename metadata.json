@@ -1,0 +1,6 @@
+{
+  "name": "SHADOW SYSTEM",
+  "description": "Personal AI Training System — The Path to Jin-Woo",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
